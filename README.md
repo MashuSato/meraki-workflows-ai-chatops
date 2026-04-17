@@ -4,6 +4,18 @@ Empowering IT Admins with Webex-Integrated Autonomous ChatOps via Cisco Meraki W
 
 This project transforms Meraki Workflows into a highly intelligent, context-aware Network Assistant. It proactively generates a daily network health report and reactively answers complex troubleshooting questions using GenAI (Gemini 2.5 Flash).
 
+## ⚠️ IMPORTANT: Data Privacy & Security Warning (Please Read First)
+
+This solution transmits sensitive network telemetry data (including Device Names, MAC Addresses, Serial Numbers, and Internal IP Addresses) to an external Large Language Model (Google Gemini API) for analysis. 
+
+**When using the Google Gemini API (via Google AI Studio):**
+- **Free Tier (Not Recommended for Production):** If you use the free tier API key, Google's Terms of Service state that your input data **may be used to train and improve their models**, and may be reviewed by human reviewers. **DO NOT** use the free tier if your network data contains highly confidential or proprietary information.
+- **Pay-as-you-go / Paid Tier (Recommended):** If you set up a billing account (Pay-as-you-go), Google explicitly states that your data **will NOT be used for training** their models, ensuring enterprise-grade data privacy. 
+
+**Best Practice:** We strongly advise enabling a billing account on Google AI Studio and setting a strict budget alert (e.g., $1/month) to ensure your data remains private while keeping costs negligible. Use this tool at your own risk and ensure compliance with your organization's security policies.
+
+---
+
 ## Features
 - **100% Serverless**: Runs entirely on Cisco Meraki Workflows. No external databases or servers required.
 - **Proactive Morning Briefing**: Automated daily health reports delivered to Webex.
@@ -13,7 +25,7 @@ This project transforms Meraki Workflows into a highly intelligent, context-awar
 ## Prerequisites
 - A Cisco Meraki Organization with Workflows enabled.
 - A Webex Bot Access Token and Room ID.
-- A Google Gemini API Key (Gemini 2.5 Flash).
+- A Google Gemini API Key (Gemini 2.5 Flash) - **Paid tier recommended for privacy**.
 
 ## Setup Guide
 
@@ -64,3 +76,6 @@ Navigate to **Automation -> Variables** in the Meraki Dashboard and create the f
 ## Usage
 - Check your Webex room every morning for the Network Health Report.
 - Mention the bot in Webex (e.g., `@BotName Why is the Assurance Score for "0_White" so low?`) to start troubleshooting.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
