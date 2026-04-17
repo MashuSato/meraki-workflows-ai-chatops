@@ -32,6 +32,8 @@ Although Meraki Workflows is hosted within the Meraki Dashboard environment, the
 - **Reactive ChatOps**: Interactive troubleshooting via Webex mentions.
 - **Cost-Optimized & Accurate**: Transforms complex JSON payloads into Tidy Data (CSV) to minimize LLM token consumption and prevent AI hallucinations.
 
+<img width="1444" height="744" alt="Image" src="https://github.com/user-attachments/assets/f305a156-35f7-428e-af9a-144be0a46b83" />
+
 ## Prerequisites
 - A Cisco Meraki Organization with Workflows enabled.
 - A Webex Bot Access Token and Room ID.
