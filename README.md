@@ -4,7 +4,7 @@ Empowering IT Admins with Webex-Integrated Autonomous ChatOps via Cisco Meraki W
 
 This project transforms Meraki Workflows into a highly intelligent, context-aware Network Assistant. It proactively generates a daily network health report and reactively answers complex troubleshooting questions using GenAI (Gemini 2.5 Flash).
 
-## ⚠️ IMPORTANT: Data Privacy & Security Warning (Please Read First)
+## IMPORTANT: Data Privacy & Security Warning (Please Read First)
 
 This solution transmits sensitive network telemetry data (including Device Names, MAC Addresses, Serial Numbers, and Internal IP Addresses) to an external Large Language Model (Google Gemini API) for analysis. 
 
@@ -16,7 +16,7 @@ This solution transmits sensitive network telemetry data (including Device Names
 
 ---
 
-## 🛑 Note on Dashboard API Access Restrictions (IP Whitelisting)
+## Note on Dashboard API Access Restrictions (IP Whitelisting)
 
 If your Meraki Organization enforces strict **Dashboard API Access Restrictions (IP Whitelisting)**, this solution may fail to execute API calls.
 
@@ -26,7 +26,7 @@ Although Meraki Workflows is hosted within the Meraki Dashboard environment, the
 
 ---
 
-## 🌟 How It Works (Examples)
+## How It Works (Examples)
 
 ### 1. Proactive "Morning Briefing" Report
 Every morning at 8:00 AM, the bot posts a beautifully formatted, comprehensive health summary to your Webex room.
