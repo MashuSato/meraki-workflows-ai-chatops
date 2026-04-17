@@ -16,6 +16,16 @@ This solution transmits sensitive network telemetry data (including Device Names
 
 ---
 
+## 🛑 Note on Dashboard API Access Restrictions (IP Whitelisting)
+
+If your Meraki Organization enforces strict **Dashboard API Access Restrictions (IP Whitelisting)**, this solution may fail to execute API calls.
+
+Although Meraki Workflows is hosted within the Meraki Dashboard environment, the Python scripts executed by Workflows make API calls originating from external cloud IP addresses. If these dynamic IP addresses are not whitelisted, the Meraki API will block the requests (resulting in 403 Forbidden or timeout errors).
+
+**Workaround:** Currently, maintaining a whitelist for the dynamic IP ranges used by the Workflows infrastructure is highly impractical for enterprise security. If you encounter this issue, please contact **Meraki Support** to inquire about the specific IP ranges that need to be allowed, or temporarily disable the IP restriction for testing purposes. We hope for a seamless backend integration in future Meraki updates.
+
+---
+
 ## Features
 - **100% Serverless**: Runs entirely on Cisco Meraki Workflows. No external databases or servers required.
 - **Proactive Morning Briefing**: Automated daily health reports delivered to Webex.
